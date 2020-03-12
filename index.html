@@ -1,0 +1,129 @@
+<!doctype html>
+
+<html lang="en">
+
+  <head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <title>V&A Search</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Gothic+A1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+    <script src="index.js"></script>
+
+  </head>
+
+  <body>
+      
+    <header>
+
+      <img src="images/logo.png" alt="V&A logo">
+      <h1>V&A Database Search</h1>
+
+    </header>
+
+    <main>
+
+      <div id="searchBox">
+      
+        <form id="searchForm">
+        
+            <input type="text" id="mySearch" aria-label="Search query" />
+            <input type="submit" value="Search" />
+            <br>
+            <label for="amtResults">Results Per Page:</label>
+            <select id="amtResults">
+              <option>15</option>
+              <option>30</option>
+              <option>45</option>
+            </select>
+            <label for="imagesOnly">With Images Only: </label>
+            <input type="checkbox" id="imagesOnly">
+            <label for="descOnly">With Description Only:</label>
+            <input type="checkbox" id="descOnly">
+        
+        </form>
+
+      </div>
+
+      <div id="searchLoad">
+        <img src="images/load.gif" alt="loading image">
+        <p>Loading... Please Wait!</p>
+      </div>
+
+      <div id="searchFail">
+        <p>Your search did not find any results</p>
+      </div>
+
+      <div id="searchError">
+        <p>Something went wrong, Try again later</p>
+      </div>
+
+      <div id="searchResult">
+
+
+      </div>
+
+      <nav id="navBar">
+
+        
+        <p><button id="prevPage">Previous</button> Displaying page: <span id="curPage">1</span> of <span id="maxPage">10</span> <button id="nextPage">Next</button></p>
+        <form id="pageNavForm">
+          <input id="pageNum" type="number" value="1" aria-label="Page number">
+          <input type="submit" value="Go to page">
+        </form>
+        
+
+      </nav>
+
+    </main>
+    
+    <div id="modal">
+
+      <div id="modalContent">
+
+        <div id="modalLoad">
+          <img src="images/load.gif" alt="loading image">
+          <p>Loading... Please Wait!</p>
+        </div>
+  
+        <div id="modalError">
+          <p>Something went wrong, Try again later</p>
+        </div>
+
+        <div id="modalHeader">
+          <span id="close">&nbsp; &times; &nbsp;</span>
+          <h2 id="mainTitle">Title Not Available</h2>
+        </div>
+        <div id="modalBody">
+          <div>
+            <img src="images/default.png" id="modalImage" alt="Default placeholder image">
+          </div>
+          <div>
+            <p id="subTitle">Title: Not Available</p>
+            <p id="subArtist">Artist: Not Available</p>
+            <p id="subDate">Date: Not Available</p>
+            <p id="subLoc">Location: Not Available</p>
+            <p id="subCountry">Country: Not Available</p>
+            <p id="subDims">Dimensions: Not Available</p>
+            <p id="subCateg">Categories: Not Available</p>
+            <p id="subDesc">Description: Not Available</p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <footer>
+
+      <p>CI527 - Assignment 1<br>&copy; Artur Stokkeland, 2020</p>
+
+    </footer>
+      
+  </body>
+
+</html>
